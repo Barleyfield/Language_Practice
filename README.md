@@ -1,3 +1,3 @@
 # Language_Practice
 
-Study for a variety of languages.
+Let's practice various languages.
