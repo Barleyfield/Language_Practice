@@ -1,0 +1,113 @@
+<!-- wallet.html을 반드시 C:\dapps에 넣기 -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="./lib/bignumber.min.js"></script>
+    <script type="text/javascript" src="./lib/web3-light.min.js"></script>
+    <script type="text/javascript">
+        
+        var Web3 = require('web3');
+        var web3 = new Web3();
+        web3.setProvider(new web3.providers.HttpProvider("http://127.0.0.1:8545"));
+        /*
+        var web3;
+        if (typeof web3 !== 'undefined') 
+        { 
+	        web3 = new Web3(web3.currentProvider); 
+        } 
+        else 
+        { 
+	        // set the provider you want from Web3.providers 
+	        web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545")); 
+        }
+        */
+        // 잔고 출력
+        function refreshBalance()
+        {
+            document.getElementById("tablePlace").innerText = " ";
+            var idiv = document.createElement('div');
+            document.getElementById("tablePlace").appendChild(idiv);
+
+            var list = web3.eth.accounts;
+            var total = 0;
+            var input = "<table>";
+
+            for(var i=0; i<list.length; i++)
+            {
+                var tempB = parseFloat(web3.fromWei(web3.eth.getBalance(list[i]), "ether"));
+                input += "<tr><td>" + list[i] + "</td><td>" + tempB + " ETHER</td></tr>";
+                total += tempB;
+            }
+
+            input += "<tr><td><strong> TOTAL </strong></td><td><strong>" + total + " ETHER</strong></td></tr></table>";
+            idiv.innerHTML = input;
+            web3.eth.filter('latest').watch(function() {refreshBalance(); });
+
+        }
+
+        function makeSelect()
+        {
+            var list = web3.eth.accounts;
+            var select = document.getElementById('accounts');
+            for(var i = 0; i<list.length; i++)
+            {
+                var opt = document.createElement('option');
+                opt.value = list[i];
+                opt.innerHTML = list[i];
+                select.appendChild(opt);
+
+            }
+        }
+
+        function send()
+        {
+            var address = document.getElementById('accounts').value;
+            var toAddress = document.getElementById('toaddr').value;
+            var amount = web3.toWei(document.getElementById('amount').value, "ether");
+
+            if(web3.personal.unlockAccount(address, document.getElementById('pass').value))
+            {
+                web3.eth.sendTransaction({from:address, to:toAddress, value:amount, function(err, result){
+                    if(!err)
+                    {
+                        console.log('Transaction send successful!( '+result+' )');
+                    }
+                    else
+                    {
+                        console.log(err);
+                    }
+                }}); 
+            }
+        }
+    </script>
+    <style>
+    table{border-collapse:collapse; border:4px solid #bbb; width:100%;}
+    tr:nth-child(even) {background-color:#ccc}
+    td, h1 {padding:8px; text-align:left;}
+    input, select {
+        padding: 6px 10px;
+        margin : 4px 0;
+        display : inline-block;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        box-sizing: border-box;
+    }
+    button:hover {background-color:gold;}
+
+    </style>
+</head>
+<body>
+    <h1>ETHER Wallet</h1>
+        <div id="tablePlace"></div>
+        <h4>송신처 <select id="accounts"></select></h4>
+        <h4>수신처 <input type="text" id="toaddr" size="40" value=""></h4>
+        <h4>금액 <input id="amount" type="number"/> ETHER</h4>
+        <h4>password <input id="pass" type="password"/>
+        <button onClick="send()">Send</button></h4>
+        <script>
+            refreshBalance();
+            makeSelect();
+        </script>
+</body>
+</html>
