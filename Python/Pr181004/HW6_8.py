@@ -44,6 +44,6 @@ for i in range(len(digit_list)) :			# 몇 자리 수인지만큼 반복 (3자리
 
 
 
-
+input("Press Enter to end")
 
 

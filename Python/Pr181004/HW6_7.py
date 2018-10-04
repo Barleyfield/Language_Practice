@@ -15,3 +15,4 @@ for i in range(1,1000,2) :	# 반복문 수행. 홀수이므로 2씩 증가
 		break
 	
 
+input("Press Enter to end")
