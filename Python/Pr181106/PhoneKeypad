@@ -1,0 +1,53 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Nov  6 09:27:09 2018
+
+@author: Barley
+
+Phone Keypad
+
+"""
+
+def Keypad_change(s) :
+    ch = ""
+    outStr = ""
+    
+    for i in range(len(s)) :
+        ch = s[i]
+        if(  (ord(ch) >= ord("a") and ord(ch) <= ord("c")) or 
+           (ord(ch) >= ord("A") and ord(ch) <= ord("C")) ) :
+            ch = "2"
+        elif(  (ord(ch) >= ord("d") and ord(ch) <= ord("f")) or 
+           (ord(ch) >= ord("D") and ord(ch) <= ord("F")) ) :
+            ch = "3"
+        elif(  (ord(ch) >= ord("g") and ord(ch) <= ord("i")) or 
+           (ord(ch) >= ord("G") and ord(ch) <= ord("I")) ) :
+            ch = "4"
+        elif(  (ord(ch) >= ord("j") and ord(ch) <= ord("l")) or 
+           (ord(ch) >= ord("J") and ord(ch) <= ord("L")) ) :
+            ch = "5"
+        elif(  (ord(ch) >= ord("m") and ord(ch) <= ord("o")) or 
+           (ord(ch) >= ord("M") and ord(ch) <= ord("O")) ) :
+            ch = "6"
+        elif(  (ord(ch) >= ord("p") and ord(ch) <= ord("s")) or 
+           (ord(ch) >= ord("P") and ord(ch) <= ord("S")) ) :
+            ch = "7"
+        elif(  (ord(ch) >= ord("t") and ord(ch) <= ord("v")) or 
+           (ord(ch) >= ord("T") and ord(ch) <= ord("V")) ) :
+            ch = "8"        
+        elif(  (ord(ch) >= ord("w") and ord(ch) <= ord("z")) or 
+           (ord(ch) >= ord("W") and ord(ch) <= ord("Z")) ) :
+            ch = "9"
+        else :
+            ch = "1"
+        outStr += ch
+    
+    return outStr
+
+if __name__ == "__main__" :
+    input_str = input("문자열 입력 : ")
+    new_str = Keypad_change(input_str)
+    print(new_str)
+        
+    
+    
