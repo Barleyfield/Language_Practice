@@ -1,0 +1,33 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Thu Nov  8 09:37:16 2018
+
+@author: Barley
+
+Calculator
+
+"""
+
+def calc(v1,v2,op) :
+    if(op == '+') :
+        return (v1 + v2)
+    elif(op == '-') :
+        return (v1 - v2)
+    elif(op == '*') :
+        return (v1 * v2)
+    elif(op == '/') :
+        if(v2 == 0) :
+            print("0으로 나눌 수 없습니다.")
+            return          # return을 써 주면 None을 알아서 반환
+    elif(op == '**') :
+        return (v1 ** v2)
+    else :
+        print("연산자를 잘못 입력했습니다.")
+        return
+
+if __name__ == "__main__" :
+    a = int(input("First : "))
+    b = int(input("Second : "))
+    op = input("operator : ")
+    print(calc(a,b,op))
+    
