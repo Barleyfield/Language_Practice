@@ -1,0 +1,16 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Nov 13 00:21:17 2018
+
+@author: Isaac
+"""
+
+inStr = " 한글 python 프로그래밍 "
+outStr = ""
+
+for i in range(0, len(inStr)) :
+    if inStr[i] != ' ' :
+        outStr += inStr[i]
+
+print("원래 문자열 : " + "[" + inStr + "]")
+print("공백 삭제 문자열 : " + "[" + outStr + "]")
