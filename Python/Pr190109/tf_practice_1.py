@@ -5,7 +5,7 @@ Created on Wed Jan  9 16:57:12 2019
 @author: Isaac
 
 3분 딥러닝 텐서플로맛
-텐서플 연습 1
+텐서플로 연습 1
 
 """
 
