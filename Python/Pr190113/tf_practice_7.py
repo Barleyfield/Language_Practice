@@ -9,11 +9,15 @@
 import tensorflow as tf
 import numpy as np
 
+csv_path = 'D:\\Study\\CodePractice\\LanguagePractice\\Python\\Pr190113\\data.csv'
+ckpt_model_path = 'D:\\Study\\CodePractice\\LanguagePractice\\Python\\Pr190113\\model'
+dnn_ckpt_path = 'D:\\Study\\CodePractice\\LanguagePractice\\Python\\Pr190113\\model\\dnn.ckpt'
+
 # 데이터를 읽어들이고 변환하는 코드르 프로그램 시작
 # unpack = True : csv 파일의 행과 열을 바꾼다
 # np.transpose도 마찬가지
 # 파일 경로는 ./data.csv로 하려 했으나 인식이 안 되어 절대 경로로 넣음
-data = np.loadtxt('C:\\Users\\Isaac\\Documents\\LanguagePractice\\Python\\Pr190113\\data.csv', delimiter=',', unpack=True, dtype='float32')
+data = np.loadtxt(csv_path, delimiter=',', unpack=True, dtype='float32')
 x_data = np.transpose(data[0:2])
 y_data = np.transpose(data[2:])
 
@@ -50,7 +54,7 @@ saver = tf.train.Saver(tf.global_variables())
 # './model' 디렉토리에 기존에 학습해둔 모델이 있는지 확인.
 # 모델이 있다면 saver.restore 함수로 학습된 값 불러옴. 없으면 변수를 새로 초기화
 # 체크포인트 파일 = 학습된 모델을 저장한 파일
-ckpt = tf.train.get_checkpoint_state('C:\\Users\\Isaac\\Documents\\LanguagePractice\\Python\\Pr190113\\model')
+ckpt = tf.train.get_checkpoint_state(ckpt_model_path)
 if ckpt and tf.train.checkpoint_exists(ckpt.model_checkpoint_path) :
     saver.restore(sess, ckpt.model_checkpoint_path)
 else :
@@ -68,7 +72,7 @@ for step in range(2) :
 # 최적화가 끝난 뒤 학습된 변수들을 지정한 체크포인트 파일에 저장
 # 2번째 매개 변수는 체크포인트 파일의 위치와 이름. model 디렉토리는 이미 만들어져 있어야 한다.
 # global_step의 값은 저장할 파일의 이름에 추가로 붙는다. 이걸로 여러 상태의 체크포인트 생성 가능.
-saver.save(sess, 'C:\\Users\\Isaac\\Documents\\LanguagePractice\\Python\\Pr190113\\model/dnn.ckpt', global_step=global_step)
+saver.save(sess, dnn_ckpt_path, global_step=global_step)
 
 # 예측 결과와 정확도 확인하는 코드 삽입, 실행 결과 확인
 prediction = tf.argmax(model, 1)

@@ -8,8 +8,10 @@
 import tensorflow as tf
 import numpy as np
 
-csv_path = 'C:\\Users\\Isaac\\Documents\\LanguagePractice\\Python\\Pr190114\\data.csv'
-ckpt_model_path = 'C:\\Users\\Isaac\\Documents\\LanguagePractice\\Python\\Pr190114\\model'
+csv_path = 'D:\\Study\\CodePractice\\LanguagePractice\\Python\\Pr190114\\data.csv'
+ckpt_model_path = 'D:\\Study\\CodePractice\\LanguagePractice\\Python\\Pr190114\\model'
+logs_path = 'D:\\Study\\CodePractice\\LanguagePractice\\Python\\Pr190114\\logs'
+dnn_ckpt_path = 'D:\\Study\\CodePractice\\LanguagePractice\\Python\\Pr190114\\model\\dnn.ckpt'
 
 # 데이터를 읽어들이는 코드와 플레이스홀더 값 설정
 data = np.loadtxt(csv_path, delimiter=',', unpack=True, dtype='float32')
@@ -71,7 +73,7 @@ else :
 # 앞서 지정한 텐서를 수집
 merged = tf.summary.merge_all()
 # 그래프와 텐서들의 값을 저장할 디렉터리 설정
-writer = tf.summary.FileWriter('./logs', sess.graph)
+writer = tf.summary.FileWriter(logs_path, sess.graph)
 
 # 최적화 실행하는 코드 작성
 for step in range(100) :
@@ -87,7 +89,7 @@ for step in range(100) :
 
 
 # 모델을 저장하고 예측하는 부분 작성
-saver.save(sess, './model/dnn.ckpt', global_step=global_step)
+saver.save(sess, dnn_ckpt_path, global_step=global_step)
 prediction = tf.argmax(model, 1)
 target = tf.argmax(Y, 1)
 print('예측값 : ', sess.run(prediction, feed_dict={X: x_data}))
