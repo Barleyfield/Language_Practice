@@ -1,0 +1,105 @@
+----- ReLU -----
+
+Image Shape : (28, 28, 1)
+Training Set: 55000 samples
+Validation Set: 5000 samples
+Test set: 10000 samples
+X_train에 패딩 씌우기: (32, 32, 1)
+4
+Training...
+
+Epoch 1, Validation Accuracy = 0.971
+
+Epoch 2, Validation Accuracy = 0.976
+
+Epoch 3, Validation Accuracy = 0.984
+
+Epoch 4, Validation Accuracy = 0.987
+
+Epoch 5, Validation Accuracy = 0.985
+
+Epoch 6, Validation Accuracy = 0.988
+
+Epoch 7, Validation Accuracy = 0.990
+
+Epoch 8, Validation Accuracy = 0.989
+
+Epoch 9, Validation Accuracy = 0.990
+
+Epoch 10, Validation Accuracy = 0.987
+
+Model Saved
+INFO:tensorflow:Restoring parameters from C:\Users\Isaac\Documents\LanguagePractice\Python\Pr190123\saver
+Test Accuracy = 0.986
+
+￼
+----- Sigmoid -----
+
+Image Shape : (28, 28, 1)
+Training Set: 55000 samples
+Validation Set: 5000 samples
+Test set: 10000 samples
+X_train에 패딩 씌우기: (32, 32, 1)
+1
+Training...
+
+Epoch 1, Validation Accuracy = 0.884
+
+Epoch 2, Validation Accuracy = 0.952
+
+Epoch 3, Validation Accuracy = 0.965
+
+Epoch 4, Validation Accuracy = 0.973
+
+Epoch 5, Validation Accuracy = 0.977
+
+Epoch 6, Validation Accuracy = 0.980
+
+Epoch 7, Validation Accuracy = 0.981
+
+Epoch 8, Validation Accuracy = 0.983
+
+Epoch 9, Validation Accuracy = 0.984
+
+Epoch 10, Validation Accuracy = 0.985
+
+Model Saved
+INFO:tensorflow:Restoring parameters from C:\Users\Isaac\Documents\LanguagePractice\Python\Pr190124\saver
+Test Accuracy = 0.985
+
+￼
+----- Leaky ReLU -----
+
+Image Shape : (28, 28, 1)
+Training Set: 55000 samples
+Validation Set: 5000 samples
+Test set: 10000 samples
+X_train에 패딩 씌우기: (32, 32, 1)
+7
+Training...
+
+Epoch 1, Validation Accuracy = 0.968
+
+Epoch 2, Validation Accuracy = 0.981
+
+Epoch 3, Validation Accuracy = 0.984
+
+Epoch 4, Validation Accuracy = 0.987
+
+Epoch 5, Validation Accuracy = 0.986
+
+Epoch 6, Validation Accuracy = 0.988
+
+Epoch 7, Validation Accuracy = 0.989
+
+Epoch 8, Validation Accuracy = 0.986
+
+Epoch 9, Validation Accuracy = 0.989
+
+Epoch 10, Validation Accuracy = 0.988
+
+Model Saved
+INFO:tensorflow:Restoring parameters from C:\Users\Isaac\Documents\LanguagePractice\Python\Pr190124\saver
+Test Accuracy = 0.989
+
+￼
