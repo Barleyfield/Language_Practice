@@ -1,4 +1,4 @@
-오후 11:52 2017-10-17
+// 오후 11:52 2017-10-17
 #include <iostream>
 #include <cstring>
 using namespace std;
