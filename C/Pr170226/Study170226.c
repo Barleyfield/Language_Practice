@@ -4,9 +4,9 @@ int main(void)
 	int result;
 	int num1, num2;
 
-	printf("Á¤¼ö 1: ");
+	printf("ÃÂ¤Â¼Ã¶ 1: ");
 	scanf_s("%d", &num1);
-	printf("Á¤¼ö 2: ");
+	printf("ÃÂ¤Â¼Ã¶ 2: ");
 	scanf_s("%d", &num2);
 
 	result = num1 + num2;
