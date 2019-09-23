@@ -1,0 +1,6 @@
+<map id="_tmain" name="_tmain">
+<area shape="rect" id="node1" title="프로그램 시작 지점 &amp; \brief에 대한 테스트" alt="" coords="5,56,67,83"/>
+<area shape="rect" id="node2" href="$_cpp_test_8cpp.html#a60bcfeef79b29ebe770e2fe8019a8470" title="Root계열 클래스를 생성한다. 그리고 리턴." alt="" coords="127,5,245,32"/>
+<area shape="rect" id="node3" href="$group___r_o_o_t___i_n_i_t.html#ga09c8f0ab7f0632b2f9079caf513e4723" title="virtual 기능 확인용 테스트 함수. child 클래스에서만 사용하도록 virtual pure 로 선언된다." alt="" coords="115,56,257,83"/>
+<area shape="rect" id="node4" href="$_cpp_test_8cpp.html#af2cd7e16a09ac465f9b7bf83c7b69aeb" title="cpp 문법 테스트. if() 괄호 안에 변수를 선언해도 되는가?" alt="" coords="139,107,233,133"/>
+</map>

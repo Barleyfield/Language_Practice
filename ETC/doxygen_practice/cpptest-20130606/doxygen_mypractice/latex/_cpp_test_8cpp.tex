@@ -1,0 +1,144 @@
+\hypertarget{_cpp_test_8cpp}{}\doxysection{Cpp\+Test/\+Cpp\+Test.cpp 파일 참조}
+\label{_cpp_test_8cpp}\index{CppTest/CppTest.cpp@{CppTest/CppTest.cpp}}
+{\ttfamily \#include \char`\"{}stdafx.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$conio.\+h$>$}\newline
+Cpp\+Test.\+cpp에 대한 include 의존 그래프
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_cpp_test_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{클래스}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_sales_promotion_info}{Sales\+Promotion\+Info}}
+\begin{DoxyCompactList}\small\item\em 세일즈 프로모션 데이터를 저장하는 구조체. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_root_zero}{Root\+Zero}}
+\begin{DoxyCompactList}\small\item\em 최상단 루트 클래스 \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_root_one}{Root\+One}}
+\begin{DoxyCompactList}\small\item\em Root\+Zero로 부터 상속된 테스트 클래스 2 \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_root_two}{Root\+Two}}
+\begin{DoxyCompactList}\small\item\em Root\+One로 부터 상속된 테스트 클래스 3 \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_root_three}{Root\+Three}}
+\begin{DoxyCompactList}\small\item\em Root\+Two로 부터 상속된 테스트 클래스 4 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{함수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_root_zero}{Root\+Zero}} $\ast$ \mbox{\hyperlink{_cpp_test_8cpp_a60bcfeef79b29ebe770e2fe8019a8470}{get\+Root\+Class\+Ptr}} ()
+\begin{DoxyCompactList}\small\item\em Root계열 클래스를 생성한다. 그리고 리턴. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_cpp_test_8cpp_af2cd7e16a09ac465f9b7bf83c7b69aeb}{test\+Function}} (int param\+\_\+)
+\begin{DoxyCompactList}\small\item\em cpp 문법 테스트. if() 괄호 안에 변수를 선언해도 되는가? \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group___g_l_o_b_a_l___f_u_n_c_ga353674c5af92be7fb389265cde4e5e03}{\+\_\+tmain}} (int argc, \+\_\+\+T\+C\+H\+AR $\ast$argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em 프로그램 시작 지점 \& \textbackslash{}brief에 대한 테스트 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{변수}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{_cpp_test_8cpp_a2c36be6132ca7f0138d2d045622bb423}{\+\_\+varG}} = 0
+\begin{DoxyCompactList}\small\item\em 스태틱 상태값 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+C++ 문법과 Doxy\+Gen 문법을 테스트하기 위한 코드 
+
+\doxysubsection{함수 문서화}
+\mbox{\Hypertarget{_cpp_test_8cpp_a60bcfeef79b29ebe770e2fe8019a8470}\label{_cpp_test_8cpp_a60bcfeef79b29ebe770e2fe8019a8470}} 
+\index{CppTest.cpp@{CppTest.cpp}!getRootClassPtr@{getRootClassPtr}}
+\index{getRootClassPtr@{getRootClassPtr}!CppTest.cpp@{CppTest.cpp}}
+\doxysubsubsection{\texorpdfstring{getRootClassPtr()}{getRootClassPtr()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_root_zero}{Root\+Zero}}$\ast$ get\+Root\+Class\+Ptr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Root계열 클래스를 생성한다. 그리고 리턴. 
+
+\begin{DoxyReturn}{반환값}
+Root\+Zero$\ast$ 타입으로 생성된 포인터를 리턴한다. 
+\end{DoxyReturn}
+\begin{Desc}
+\item[예제]\par
+\mbox{\hyperlink{_d_1_2_study_2_github_2_language__practice_2_e_t_c_2doxygen_practice_2cpptest-20130606_2_cpp_test_2_cpp_test_8cpp-example}{D\+:/\+Study/\+Github/\+Language\+\_\+\+Practice/\+E\+T\+C/doxygen\+\_\+practice/cpptest-\/20130606/\+Cpp\+Test/\+Cpp\+Test.\+cpp}}.\end{Desc}
+
+
+Cpp\+Test.\+cpp 파일의 226 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{227 \{}
+\DoxyCodeLine{228     \textcolor{keywordflow}{return} \textcolor{keyword}{new} \mbox{\hyperlink{class_root_three}{RootThree}};}
+\DoxyCodeLine{229 \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=250pt]{_cpp_test_8cpp_a60bcfeef79b29ebe770e2fe8019a8470_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_cpp_test_8cpp_af2cd7e16a09ac465f9b7bf83c7b69aeb}\label{_cpp_test_8cpp_af2cd7e16a09ac465f9b7bf83c7b69aeb}} 
+\index{CppTest.cpp@{CppTest.cpp}!testFunction@{testFunction}}
+\index{testFunction@{testFunction}!CppTest.cpp@{CppTest.cpp}}
+\doxysubsubsection{\texorpdfstring{testFunction()}{testFunction()}}
+{\footnotesize\ttfamily int test\+Function (\begin{DoxyParamCaption}\item[{int}]{param\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+cpp 문법 테스트. if() 괄호 안에 변수를 선언해도 되는가? 
+
+
+\begin{DoxyParams}[1]{매개변수}
+\mbox{\texttt{ in}}  & {\em param\+\_\+} & ($>$ 0) 그냥 실행, ($<$ 0) param\+\_\+을 그대로 리턴. \\
+\hline
+\end{DoxyParams}
+$<$ 아쉽게도 if( (int \+\_\+vv = test\+Function(-\/5)) $<$ 0 ).. 는 안됐다.\begin{Desc}
+\item[예제]\par
+\mbox{\hyperlink{_d_1_2_study_2_github_2_language__practice_2_e_t_c_2doxygen_practice_2cpptest-20130606_2_cpp_test_2_cpp_test_8cpp-example}{D\+:/\+Study/\+Github/\+Language\+\_\+\+Practice/\+E\+T\+C/doxygen\+\_\+practice/cpptest-\/20130606/\+Cpp\+Test/\+Cpp\+Test.\+cpp}}.\end{Desc}
+
+
+Cpp\+Test.\+cpp 파일의 236 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{237 \{}
+\DoxyCodeLine{238     \textcolor{keywordflow}{if}( param\_ < 0 ) \textcolor{keywordflow}{return} param\_;}
+\DoxyCodeLine{240     \textcolor{keywordtype}{int} \_vv;}
+\DoxyCodeLine{241     \textcolor{keywordflow}{if}( (\_vv = \mbox{\hyperlink{_cpp_test_8cpp_af2cd7e16a09ac465f9b7bf83c7b69aeb}{testFunction}}(-\/5)) < 0 )}
+\DoxyCodeLine{242     \{}
+\DoxyCodeLine{243         cout << \textcolor{stringliteral}{"test val: "} << \_vv << endl;}
+\DoxyCodeLine{244     \}}
+\DoxyCodeLine{245     \textcolor{keywordflow}{return} param\_;}
+\DoxyCodeLine{246 \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=233pt]{_cpp_test_8cpp_af2cd7e16a09ac465f9b7bf83c7b69aeb_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{변수 문서화}
+\mbox{\Hypertarget{_cpp_test_8cpp_a2c36be6132ca7f0138d2d045622bb423}\label{_cpp_test_8cpp_a2c36be6132ca7f0138d2d045622bb423}} 
+\index{CppTest.cpp@{CppTest.cpp}!\_varG@{\_varG}}
+\index{\_varG@{\_varG}!CppTest.cpp@{CppTest.cpp}}
+\doxysubsubsection{\texorpdfstring{\_varG}{\_varG}}
+{\footnotesize\ttfamily static int \+\_\+varG = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+스태틱 상태값 
+
+\begin{Desc}
+\item[예제]\par
+\mbox{\hyperlink{_d_1_2_study_2_github_2_language__practice_2_e_t_c_2doxygen_practice_2cpptest-20130606_2_cpp_test_2_cpp_test_8cpp-example}{D\+:/\+Study/\+Github/\+Language\+\_\+\+Practice/\+E\+T\+C/doxygen\+\_\+practice/cpptest-\/20130606/\+Cpp\+Test/\+Cpp\+Test.\+cpp}}.\end{Desc}
+
+
+Cpp\+Test.\+cpp 파일의 52 번째 라인에서 정의되었습니다.
+

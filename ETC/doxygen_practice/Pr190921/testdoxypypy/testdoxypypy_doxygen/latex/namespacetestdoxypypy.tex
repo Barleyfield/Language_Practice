@@ -1,0 +1,75 @@
+\hypertarget{namespacetestdoxypypy}{}\doxysection{testdoxypypy 네임스페이스 참조}
+\label{namespacetestdoxypypy}\index{testdoxypypy@{testdoxypypy}}
+\doxysubsection*{함수}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacetestdoxypypy_a587b652e449b9059de3fc8461e2a36fb}{myfunction}} (arg1, arg2, kwarg=\textquotesingle{}whatever.\textquotesingle{})
+\begin{DoxyCompactList}\small\item\em Does nothing more than demonstrate syntax. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{함수 문서화}
+\mbox{\Hypertarget{namespacetestdoxypypy_a587b652e449b9059de3fc8461e2a36fb}\label{namespacetestdoxypypy_a587b652e449b9059de3fc8461e2a36fb}} 
+\index{testdoxypypy@{testdoxypypy}!myfunction@{myfunction}}
+\index{myfunction@{myfunction}!testdoxypypy@{testdoxypypy}}
+\doxysubsubsection{\texorpdfstring{myfunction()}{myfunction()}}
+{\footnotesize\ttfamily def testdoxypypy.\+myfunction (\begin{DoxyParamCaption}\item[{}]{arg1,  }\item[{}]{arg2,  }\item[{}]{kwarg = {\ttfamily \textquotesingle{}whatever.\textquotesingle{}} }\end{DoxyParamCaption})}
+
+
+
+Does nothing more than demonstrate syntax. 
+
+This is an example of how a Pythonic human-\/readable docstring can get parsed by doxypypy and marked up with Doxygen commands as a regular input filter to Doxygen.
+
+
+\begin{DoxyParams}{매개변수}
+{\em arg1} & A positional argument. \\
+\hline
+{\em arg2} & Another positional argument.\\
+\hline
+{\em kwarg} & A keyword argument.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{반환값}
+A string holding the result.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{예외}
+{\em Zero\+Division\+Error} & \\
+\hline
+{\em Assertion\+Error} & \\
+\hline
+{\em Value\+Error.} & {\bfseries{Examples}} 
+\begin{DoxyCode}{1}
+\DoxyCodeLine{>>> \mbox{\hyperlink{namespacetestdoxypypy_a587b652e449b9059de3fc8461e2a36fb}{myfunction}}(2, 3)}
+\DoxyCodeLine{\textcolor{stringliteral}{'5 -\/ 0, whatever.'}}
+\DoxyCodeLine{>>> \mbox{\hyperlink{namespacetestdoxypypy_a587b652e449b9059de3fc8461e2a36fb}{myfunction}}(5, 0, \textcolor{stringliteral}{'oops.'})}
+\DoxyCodeLine{Traceback (most recent call last):}
+\DoxyCodeLine{    ...}
+\DoxyCodeLine{ZeroDivisionError: integer division \textcolor{keywordflow}{or} modulo by zero}
+\DoxyCodeLine{>>> \mbox{\hyperlink{namespacetestdoxypypy_a587b652e449b9059de3fc8461e2a36fb}{myfunction}}(4, 1, \textcolor{stringliteral}{'got it.'})}
+\DoxyCodeLine{\textcolor{stringliteral}{'5 -\/ 4, got it.'}}
+\DoxyCodeLine{>>> \mbox{\hyperlink{namespacetestdoxypypy_a587b652e449b9059de3fc8461e2a36fb}{myfunction}}(23.5, 23, \textcolor{stringliteral}{'oh well.'})}
+\DoxyCodeLine{Traceback (most recent call last):}
+\DoxyCodeLine{    ...}
+\DoxyCodeLine{AssertionError}
+\DoxyCodeLine{>>> \mbox{\hyperlink{namespacetestdoxypypy_a587b652e449b9059de3fc8461e2a36fb}{myfunction}}(5, 50, \textcolor{stringliteral}{'too big.'})}
+\DoxyCodeLine{Traceback (most recent call last):}
+\DoxyCodeLine{    ...}
+\DoxyCodeLine{ValueError}
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyExceptions}
+
+
+testdoxypypy.\+py 파일의 45 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{45 \textcolor{keyword}{def }\mbox{\hyperlink{namespacetestdoxypypy_a587b652e449b9059de3fc8461e2a36fb}{myfunction}}(arg1, arg2, kwarg='whatever.'):}
+\DoxyCodeLine{46     \textcolor{keyword}{assert} isinstance(arg1, int)}
+\DoxyCodeLine{47     \textcolor{keywordflow}{if} arg2 > 23:}
+\DoxyCodeLine{48         \textcolor{keywordflow}{raise} ValueError}
+\DoxyCodeLine{49     \textcolor{keywordflow}{return} \textcolor{stringliteral}{'\{0\} -\/ \{1\}, \{2\}'}.format(arg1 + arg2, arg1 / arg2, kwarg)}
+
+\end{DoxyCode}

@@ -1,0 +1,4 @@
+<map id="RootZero::initHandler" name="RootZero::initHandler">
+<area shape="rect" id="node1" title="virtual 기능 확인용 테스트 함수. child 클래스에서만 사용하도록 virtual pure 로 선언된다." alt="" coords="115,5,257,32"/>
+<area shape="rect" id="node2" href="$group___g_l_o_b_a_l___f_u_n_c.html#ga353674c5af92be7fb389265cde4e5e03" title="프로그램 시작 지점 &amp; \brief에 대한 테스트" alt="" coords="5,5,67,32"/>
+</map>

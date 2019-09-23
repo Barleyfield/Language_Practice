@@ -1,0 +1,160 @@
+\hypertarget{_d_1_2_study_2_github_2_language__practice_2_e_t_c_2doxygen_practice_2cpptest-20130606_2_cpp_test_2_cpp_test_8cpp-example}{}\doxysection{D\+:/\+Study/\+Github/\+Language\+\_\+\+Practice/\+E\+T\+C/doxygen\+\_\+practice/cpptest-\/20130606/\+Cpp\+Test/\+Cpp\+Test.\+cpp}
+이 함수의 예제. char \+\_\+buf\mbox{[}100\mbox{]}; Doxy\+Func\+Test2( 1, \textquotesingle{}a\textquotesingle{}, \+\_\+buf );
+
+
+\begin{DoxyCodeInclude}{0}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include "\mbox{\hyperlink{stdafx_8h}{stdafx.h}}"}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include <conio.h>} }
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{static} \textcolor{keywordtype}{int} \mbox{\hyperlink{_cpp_test_8cpp_a2c36be6132ca7f0138d2d045622bb423}{\_varG}} = 0;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//class SalesPromotionInfo CommonDataJP.h "XDORA/CommonData.h"}}
+\DoxyCodeLine{\textcolor{comment}{}\textcolor{keyword}{class }\mbox{\hyperlink{class_sales_promotion_info}{SalesPromotionInfo}}}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\textcolor{keyword}{public}:}
+\DoxyCodeLine{    LONGLONG    llSeq;  }
+\DoxyCodeLine{    \textcolor{keywordtype}{int}         nOrders;    }
+\DoxyCodeLine{    \textcolor{keywordtype}{char}        szSPType[5 + 1];    }
+\DoxyCodeLine{    \textcolor{keywordtype}{char}        szStartDate[22 + 1];    }
+\DoxyCodeLine{    \textcolor{keywordtype}{char}        szEndDate[22 + 1];  }
+\DoxyCodeLine{    \textcolor{keywordtype}{char}        szTitle[100 + 1];   }
+\DoxyCodeLine{    \textcolor{keywordtype}{char}        szContent[1000 + 1]; }
+\DoxyCodeLine{    \textcolor{keywordtype}{char}        szImgUrl[512 + 1];  }
+\DoxyCodeLine{    \textcolor{keywordtype}{char}        szMoveTo[5 + 1];    }
+\DoxyCodeLine{    \textcolor{keywordtype}{int}         nDeviceType;    }
+\DoxyCodeLine{\};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{class }\mbox{\hyperlink{class_root_zero}{RootZero}}}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\textcolor{keyword}{public}:}
+\DoxyCodeLine{    \textcolor{keyword}{virtual} ~\mbox{\hyperlink{class_root_zero}{RootZero}}()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        cout << \_\_FUNCTION\_\_ << endl;}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{    \textcolor{keyword}{virtual} \textcolor{keywordtype}{bool} initHandler() = 0;}
+\DoxyCodeLine{\};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{class }\mbox{\hyperlink{class_root_one}{RootOne}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_root_zero}{RootZero}}}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\textcolor{keyword}{public}:}
+\DoxyCodeLine{    \mbox{\hyperlink{class_root_one}{RootOne}}()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        cout << \_\_FUNCTION\_\_ << endl;}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{virtual} ~\mbox{\hyperlink{class_root_one}{RootOne}}()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        cout << \_\_FUNCTION\_\_ << endl;}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{virtual} \textcolor{keywordtype}{bool} initHandler()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        cout << \_\_FUNCTION\_\_ << endl;}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keywordtype}{int} mnTest; }
+\DoxyCodeLine{\};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{class }\mbox{\hyperlink{class_root_two}{RootTwo}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_root_one}{RootOne}}}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\textcolor{keyword}{public}:}
+\DoxyCodeLine{    \mbox{\hyperlink{class_root_two}{RootTwo}}()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        cout << \_\_FUNCTION\_\_ << endl;}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{    \textcolor{keyword}{virtual} ~\mbox{\hyperlink{class_root_two}{RootTwo}}()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        cout << \_\_FUNCTION\_\_ << endl;}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{virtual} \textcolor{keywordtype}{bool} initHandler()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if}( ! \_\_super::initHandler() ) \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{        cout << \_\_FUNCTION\_\_ << endl;}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{\};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{class }\mbox{\hyperlink{class_root_three}{RootThree}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_root_two}{RootTwo}}}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\textcolor{keyword}{public}:}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{typedef} bool (\_\_stdcall *TPacketRecvFromMRS)(IN \mbox{\hyperlink{class_root_three}{RootThree}}*, IN \textcolor{keywordtype}{void}*);}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \mbox{\hyperlink{class_root_three}{RootThree}}()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        cout << \_\_FUNCTION\_\_ << endl;}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{    \textcolor{keyword}{virtual} ~\mbox{\hyperlink{class_root_three}{RootThree}}()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        cout << \_\_FUNCTION\_\_ << endl;}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{virtual} \textcolor{keywordtype}{bool} initHandler()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if}( ! \_\_super::initHandler() ) \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{        cout << \_\_FUNCTION\_\_ << endl;}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keywordtype}{int} Grp1() \{\}}
+\DoxyCodeLine{    \textcolor{keywordtype}{int} Grp2() \{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keywordtype}{void} Grp3() \{\}}
+\DoxyCodeLine{    \textcolor{keywordtype}{void} Grp4() \{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keywordtype}{int} mnABC; }
+\DoxyCodeLine{    \textcolor{keywordtype}{int} mnDEF; }
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keywordtype}{int} DoxyFuncTest( \textcolor{keywordtype}{int} aa, \textcolor{keywordtype}{char} bb, \textcolor{keywordtype}{char}* dd );}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keywordtype}{int} DoxyFuncTest2( \textcolor{keywordtype}{int} aa, \textcolor{keywordtype}{char} bb, \textcolor{keywordtype}{char}* dd );}
+\DoxyCodeLine{\};}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\mbox{\hyperlink{class_root_zero}{RootZero}}* \mbox{\hyperlink{_cpp_test_8cpp_a60bcfeef79b29ebe770e2fe8019a8470}{getRootClassPtr}}()}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    \textcolor{keywordflow}{return} \textcolor{keyword}{new} \mbox{\hyperlink{class_root_three}{RootThree}};}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{int} \mbox{\hyperlink{_cpp_test_8cpp_af2cd7e16a09ac465f9b7bf83c7b69aeb}{testFunction}}( \textcolor{keywordtype}{int} param\_ )}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    \textcolor{keywordflow}{if}( param\_ < 0 ) \textcolor{keywordflow}{return} param\_;}
+\DoxyCodeLine{    \textcolor{keywordtype}{int} \_vv;}
+\DoxyCodeLine{    \textcolor{keywordflow}{if}( (\_vv = \mbox{\hyperlink{_cpp_test_8cpp_af2cd7e16a09ac465f9b7bf83c7b69aeb}{testFunction}}(-\/5)) < 0 )}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        cout << \textcolor{stringliteral}{"test val: "} << \_vv << endl;}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{    \textcolor{keywordflow}{return} param\_;}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{int} \mbox{\hyperlink{group___g_l_o_b_a_l___f_u_n_c_ga353674c5af92be7fb389265cde4e5e03}{\_tmain}}(\textcolor{keywordtype}{int} argc, \_TCHAR* argv[])}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    \mbox{\hyperlink{_cpp_test_8cpp_af2cd7e16a09ac465f9b7bf83c7b69aeb}{testFunction}}(1); \_getch();}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \mbox{\hyperlink{class_root_zero}{RootZero}}* \_ptr = \mbox{\hyperlink{_cpp_test_8cpp_a60bcfeef79b29ebe770e2fe8019a8470}{getRootClassPtr}}();}
+\DoxyCodeLine{    \_ptr-\/>\mbox{\hyperlink{group___r_o_o_t___i_n_i_t_ga09c8f0ab7f0632b2f9079caf513e4723}{initHandler}}();}
+\DoxyCodeLine{    \_getch();}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{delete} \_ptr;}
+\DoxyCodeLine{    \_getch();}
+\DoxyCodeLine{}
+\DoxyCodeLine{    }
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\end{DoxyCodeInclude}
+ 

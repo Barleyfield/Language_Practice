@@ -1,0 +1,5 @@
+<map id="RootOne" name="RootOne">
+<area shape="rect" id="node3" href="$class_root_two.html" title="RootOne로 부터 상속된 테스트 클래스 3. " alt="" coords="9,155,81,181"/>
+<area shape="rect" id="node2" href="$class_root_zero.html" title="최상단 루트 클래스 " alt="" coords="8,5,83,32"/>
+<area shape="rect" id="node4" href="$class_root_three.html" title="RootTwo로 부터 상속된 테스트 클래스 4. " alt="" coords="5,229,85,256"/>
+</map>

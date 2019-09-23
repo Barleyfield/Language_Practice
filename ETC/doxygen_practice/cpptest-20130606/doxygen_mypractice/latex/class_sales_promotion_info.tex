@@ -1,0 +1,191 @@
+\hypertarget{class_sales_promotion_info}{}\doxysection{Sales\+Promotion\+Info 클래스 참조}
+\label{class_sales_promotion_info}\index{SalesPromotionInfo@{SalesPromotionInfo}}
+
+
+세일즈 프로모션 데이터를 저장하는 구조체.  
+
+
+\doxysubsection*{Public 속성}
+\begin{DoxyCompactItemize}
+\item 
+L\+O\+N\+G\+L\+O\+NG \mbox{\hyperlink{class_sales_promotion_info_a6590a55c3c06701a2e59122fb5c31458}{ll\+Seq}}
+\begin{DoxyCompactList}\small\item\em 일련번호. 단순한 인덱스. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_sales_promotion_info_aee18f4f18be36ae51a401b3a7698537b}{n\+Orders}}
+\begin{DoxyCompactList}\small\item\em 우선 순위. 표시할때 쓰려나. 어디한번 자세하게 쓰면 어떻게 나오려나? \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{class_sales_promotion_info_a8989d6a2be058336ae7d7cd8f4da63d7}{sz\+S\+P\+Type}} \mbox{[}5+1\mbox{]}
+\begin{DoxyCompactList}\small\item\em S\+P의 종류. (미정) \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{class_sales_promotion_info_a67fe361de4b0518deec21a4155fa5f3a}{sz\+Start\+Date}} \mbox{[}22+1\mbox{]}
+\begin{DoxyCompactList}\small\item\em 시작 날짜 \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{class_sales_promotion_info_a2549bcdd00f6fe21d454b82cb5dc69b8}{sz\+End\+Date}} \mbox{[}22+1\mbox{]}
+\begin{DoxyCompactList}\small\item\em 종료 날짜 \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{class_sales_promotion_info_a7868a8c2e07229d0d087077da7405131}{sz\+Title}} \mbox{[}100+1\mbox{]}
+\begin{DoxyCompactList}\small\item\em 제목 \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{class_sales_promotion_info_a674863d1ca17959463a22eec222a85b3}{sz\+Content}} \mbox{[}1000+1\mbox{]}
+\begin{DoxyCompactList}\small\item\em 설명 \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{class_sales_promotion_info_a1d411818f905ee98ebaa64bb36de402b}{sz\+Img\+Url}} \mbox{[}512+1\mbox{]}
+\begin{DoxyCompactList}\small\item\em 참고 배너 \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{class_sales_promotion_info_a283b8adca4e95e7d90d5436dd7cfd2d8}{sz\+Move\+To}} \mbox{[}5+1\mbox{]}
+\begin{DoxyCompactList}\small\item\em 클릭시 이동할 곳 (미리 정의 된 곳이 필요합니다.) \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_sales_promotion_info_ac3ea3cc75c565565138ad4ae6d90ab11}{n\+Device\+Type}}
+\begin{DoxyCompactList}\small\item\em 디바이스 구분이 필요한가? (0\+:all, 1\+:ios, 2\+:android) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+세일즈 프로모션 데이터를 저장하는 구조체. 
+
+X\+Dora\+J\+P\+Select\+Sales\+Promotion1 쿼리를 사용해서 현재 D\+B에 설정되어 있는 SP 목록을 받아온다. ~\newline
+ \begin{Desc}
+\item[예제]\par
+\mbox{\hyperlink{_d_1_2_study_2_github_2_language__practice_2_e_t_c_2doxygen_practice_2cpptest-20130606_2_cpp_test_2_cpp_test_8cpp-example}{D\+:/\+Study/\+Github/\+Language\+\_\+\+Practice/\+E\+T\+C/doxygen\+\_\+practice/cpptest-\/20130606/\+Cpp\+Test/\+Cpp\+Test.\+cpp}}.\end{Desc}
+
+
+Cpp\+Test.\+cpp 파일의 58 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{멤버 데이터 문서화}
+\mbox{\Hypertarget{class_sales_promotion_info_a6590a55c3c06701a2e59122fb5c31458}\label{class_sales_promotion_info_a6590a55c3c06701a2e59122fb5c31458}} 
+\index{SalesPromotionInfo@{SalesPromotionInfo}!llSeq@{llSeq}}
+\index{llSeq@{llSeq}!SalesPromotionInfo@{SalesPromotionInfo}}
+\doxysubsubsection{\texorpdfstring{llSeq}{llSeq}}
+{\footnotesize\ttfamily L\+O\+N\+G\+L\+O\+NG Sales\+Promotion\+Info\+::ll\+Seq}
+
+
+
+일련번호. 단순한 인덱스. 
+
+
+
+Cpp\+Test.\+cpp 파일의 61 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_sales_promotion_info_ac3ea3cc75c565565138ad4ae6d90ab11}\label{class_sales_promotion_info_ac3ea3cc75c565565138ad4ae6d90ab11}} 
+\index{SalesPromotionInfo@{SalesPromotionInfo}!nDeviceType@{nDeviceType}}
+\index{nDeviceType@{nDeviceType}!SalesPromotionInfo@{SalesPromotionInfo}}
+\doxysubsubsection{\texorpdfstring{nDeviceType}{nDeviceType}}
+{\footnotesize\ttfamily int Sales\+Promotion\+Info\+::n\+Device\+Type}
+
+
+
+디바이스 구분이 필요한가? (0\+:all, 1\+:ios, 2\+:android) 
+
+
+
+Cpp\+Test.\+cpp 파일의 70 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_sales_promotion_info_aee18f4f18be36ae51a401b3a7698537b}\label{class_sales_promotion_info_aee18f4f18be36ae51a401b3a7698537b}} 
+\index{SalesPromotionInfo@{SalesPromotionInfo}!nOrders@{nOrders}}
+\index{nOrders@{nOrders}!SalesPromotionInfo@{SalesPromotionInfo}}
+\doxysubsubsection{\texorpdfstring{nOrders}{nOrders}}
+{\footnotesize\ttfamily int Sales\+Promotion\+Info\+::n\+Orders}
+
+
+
+우선 순위. 표시할때 쓰려나. 어디한번 자세하게 쓰면 어떻게 나오려나? 
+
+
+
+Cpp\+Test.\+cpp 파일의 62 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_sales_promotion_info_a674863d1ca17959463a22eec222a85b3}\label{class_sales_promotion_info_a674863d1ca17959463a22eec222a85b3}} 
+\index{SalesPromotionInfo@{SalesPromotionInfo}!szContent@{szContent}}
+\index{szContent@{szContent}!SalesPromotionInfo@{SalesPromotionInfo}}
+\doxysubsubsection{\texorpdfstring{szContent}{szContent}}
+{\footnotesize\ttfamily char Sales\+Promotion\+Info\+::sz\+Content\mbox{[}1000+1\mbox{]}}
+
+
+
+설명 
+
+
+
+Cpp\+Test.\+cpp 파일의 67 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_sales_promotion_info_a2549bcdd00f6fe21d454b82cb5dc69b8}\label{class_sales_promotion_info_a2549bcdd00f6fe21d454b82cb5dc69b8}} 
+\index{SalesPromotionInfo@{SalesPromotionInfo}!szEndDate@{szEndDate}}
+\index{szEndDate@{szEndDate}!SalesPromotionInfo@{SalesPromotionInfo}}
+\doxysubsubsection{\texorpdfstring{szEndDate}{szEndDate}}
+{\footnotesize\ttfamily char Sales\+Promotion\+Info\+::sz\+End\+Date\mbox{[}22+1\mbox{]}}
+
+
+
+종료 날짜 
+
+
+
+Cpp\+Test.\+cpp 파일의 65 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_sales_promotion_info_a1d411818f905ee98ebaa64bb36de402b}\label{class_sales_promotion_info_a1d411818f905ee98ebaa64bb36de402b}} 
+\index{SalesPromotionInfo@{SalesPromotionInfo}!szImgUrl@{szImgUrl}}
+\index{szImgUrl@{szImgUrl}!SalesPromotionInfo@{SalesPromotionInfo}}
+\doxysubsubsection{\texorpdfstring{szImgUrl}{szImgUrl}}
+{\footnotesize\ttfamily char Sales\+Promotion\+Info\+::sz\+Img\+Url\mbox{[}512+1\mbox{]}}
+
+
+
+참고 배너 
+
+
+
+Cpp\+Test.\+cpp 파일의 68 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_sales_promotion_info_a283b8adca4e95e7d90d5436dd7cfd2d8}\label{class_sales_promotion_info_a283b8adca4e95e7d90d5436dd7cfd2d8}} 
+\index{SalesPromotionInfo@{SalesPromotionInfo}!szMoveTo@{szMoveTo}}
+\index{szMoveTo@{szMoveTo}!SalesPromotionInfo@{SalesPromotionInfo}}
+\doxysubsubsection{\texorpdfstring{szMoveTo}{szMoveTo}}
+{\footnotesize\ttfamily char Sales\+Promotion\+Info\+::sz\+Move\+To\mbox{[}5+1\mbox{]}}
+
+
+
+클릭시 이동할 곳 (미리 정의 된 곳이 필요합니다.) 
+
+
+
+Cpp\+Test.\+cpp 파일의 69 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_sales_promotion_info_a8989d6a2be058336ae7d7cd8f4da63d7}\label{class_sales_promotion_info_a8989d6a2be058336ae7d7cd8f4da63d7}} 
+\index{SalesPromotionInfo@{SalesPromotionInfo}!szSPType@{szSPType}}
+\index{szSPType@{szSPType}!SalesPromotionInfo@{SalesPromotionInfo}}
+\doxysubsubsection{\texorpdfstring{szSPType}{szSPType}}
+{\footnotesize\ttfamily char Sales\+Promotion\+Info\+::sz\+S\+P\+Type\mbox{[}5+1\mbox{]}}
+
+
+
+S\+P의 종류. (미정) 
+
+
+
+Cpp\+Test.\+cpp 파일의 63 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_sales_promotion_info_a67fe361de4b0518deec21a4155fa5f3a}\label{class_sales_promotion_info_a67fe361de4b0518deec21a4155fa5f3a}} 
+\index{SalesPromotionInfo@{SalesPromotionInfo}!szStartDate@{szStartDate}}
+\index{szStartDate@{szStartDate}!SalesPromotionInfo@{SalesPromotionInfo}}
+\doxysubsubsection{\texorpdfstring{szStartDate}{szStartDate}}
+{\footnotesize\ttfamily char Sales\+Promotion\+Info\+::sz\+Start\+Date\mbox{[}22+1\mbox{]}}
+
+
+
+시작 날짜 
+
+
+
+Cpp\+Test.\+cpp 파일의 64 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_sales_promotion_info_a7868a8c2e07229d0d087077da7405131}\label{class_sales_promotion_info_a7868a8c2e07229d0d087077da7405131}} 
+\index{SalesPromotionInfo@{SalesPromotionInfo}!szTitle@{szTitle}}
+\index{szTitle@{szTitle}!SalesPromotionInfo@{SalesPromotionInfo}}
+\doxysubsubsection{\texorpdfstring{szTitle}{szTitle}}
+{\footnotesize\ttfamily char Sales\+Promotion\+Info\+::sz\+Title\mbox{[}100+1\mbox{]}}
+
+
+
+제목 
+
+
+
+Cpp\+Test.\+cpp 파일의 66 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+Cpp\+Test/\mbox{\hyperlink{_cpp_test_8cpp}{Cpp\+Test.\+cpp}}\end{DoxyCompactItemize}
