@@ -1,0 +1,41 @@
+DARK READER brower extension custom settings
+* CAUTION
+* First find the site name, because it could already be set. 
+* Usage : https://github.com/darkreader/darkreader/issues/91#issuecomment-330833805
+
+================================
+youtube.com
+
+INVERT
+.ytp-volume-slider
+.input-element
+.ytp-progress-list
+.ytp-hover-progress
+.ytp-play-progress
+.ytp-swatch-background-color
+.ytp-progress-bar
+.ytp-progress-bar-container
+.ytp-progress-bar-padding
+.ytp-scrubber-container.ytd-comment-replies-renderer
+.input-wrapper
+================================
+bitly.com
+
+INVERT
+.hero-wrap
+.hero-content
+================================
+dic.daum.net
+
+INVERT
+.a.img_btn.btn_save
+================================
+ece.jnu.ac.kr
+
+INVERT
+ul#k2wiz_GNB.ul_1
+ul#text
+div#divView {
+background-color: ${#BBBBBB} !important;
+}
+================================
