@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">InstallerTest</string>
+    <string name="permission_denied">안드로이드의 [설정] &gt; [어플리케이션]에서 권한을 허용해주세요.</string>
+
+</resources>
