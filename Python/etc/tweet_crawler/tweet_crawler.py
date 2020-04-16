@@ -4,6 +4,7 @@ Created on Thu Apr 16 11:02:29 2020
 
 author: Barley
 source : https://jeongwookie.github.io/2019/06/10/190610-twitter-data-crawling/
+리스트에서 개행 문자 삭제 : http://blog.naver.com/popqser2/221399436541
 
 """
 
@@ -20,9 +21,28 @@ tweet_list = []
 days_range = []
 now = datetime.datetime.now()
 
+
+max_tweet_num = 10  # 수집할 트윗 개수 설정 (-1 = 무한 수집)
+days_before = 2     # 지금으로부터 며칠 전 트윗까지 수집?
+
+# 불법유통 관련 단어 텍스트 파일 읽기. (단어는 최대 14개)
+f = open("./illegal_trade_words.txt", "r", encoding='UTF8')
+words = f.readlines()
+query = ""
+
+# 텍스트에서 개행 문자 제거
+words = [line.rstrip() for line in words]
+for word in words :
+    if word == words[-1] :
+        query = query + word
+    else :
+        query = query + word + " OR "
+
+print("검색어 : " + query)
+
 # 수집 기간 설정 
 # [현재 파일 실행 날짜 - 1] ~ [현재 파일 실행 날짜]
-start_date = datetime.datetime.strptime((now - datetime.timedelta(days=1)).strftime("%Y-%m-%d"), "%Y-%m-%d")
+start_date = datetime.datetime.strptime((now - datetime.timedelta(days=days_before)).strftime("%Y-%m-%d"), "%Y-%m-%d")
 start_date_string = start_date.strftime("%Y-%m-%d")
 end_date = datetime.datetime.strptime((now + datetime.timedelta(days=1)).strftime("%Y-%m-%d"), "%Y-%m-%d")
 end_date_string = end_date.strftime("%Y-%m-%d")
@@ -34,10 +54,10 @@ for date in date_generated :
 
 # 트윗 수집 기준 정의
 tweetCriteria = got.manager.TweetCriteria()\
-                            .setQuerySearch('각종아이디판매 OR 아이디판매 OR ㄴㅔㅇㅣ버계정판매') \
+                            .setQuerySearch(query) \
                             .setSince(start_date_string)\
                             .setUntil(end_date_string)\
-                            .setMaxTweets(10)       # -1개면 무한 수집
+                            .setMaxTweets(max_tweet_num)       # -1개면 무한 수집
                             
 # GetOldTweets3로 수집
 print("데이터 수집 중... 기간 : {} ~ {}".format(days_range[0], days_range[-1]))
@@ -45,6 +65,7 @@ start_time = time.time()
 tweet = got.manager.TweetManager.getTweets(tweetCriteria)
 
 # 메타데이터 정리
+index_num = 1
 for index in tqdm_notebook(tweet) :
     # 메타데이터 목록
     username = index.username
@@ -59,7 +80,10 @@ for index in tqdm_notebook(tweet) :
         print("AttributeError 발생 계정 : {}".format(personal_link))
     #info_list = [username, personal_link, link]
     info_list = ["윤이삭", "불법거래", personal_link, "트위터"]
+    print(str(index_num) + ": ", end="")
+    print(info_list)
     tweet_list.append(info_list)
+    index_num = index_num + 1
     # 공격적인 크롤링으로 인한 랜덤 휴식시간 추가 (트위터의 크롤링 차단 방지)
     time.sleep(uniform(1,2))
 
@@ -67,10 +91,9 @@ for index in tqdm_notebook(tweet) :
 
 print("수집 끝! 걸린 시간 : {0:0.2f} 분".format((time.time()-start_time)/60))
 print("총 트윗 개수 : {}".format(len(tweet)))
-print(tweet_list)
 
 # CSV 파일로 저장
 twitter_df = pd.DataFrame(tweet_list, columns=["신고자명", "구분", "URL", "비고(특이사항 등)"])
-twitter_df.to_csv("개인정보_불법유통_방지_모니터링단_신고_윤이삭_{}.csv".format(days_range[-1]), encoding='utf-8-sig')
+twitter_df.to_csv("개인정보_불법유통_방지_모니터링단_신고_윤이삭_{}.csv".format(now.strftime("%Y-%m-%d_%H;%M;%S")), encoding='utf-8-sig')
 
     
