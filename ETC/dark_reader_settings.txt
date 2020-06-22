@@ -16,8 +16,9 @@ INVERT
 .ytp-progress-bar
 .ytp-progress-bar-container
 .ytp-progress-bar-padding
-.ytp-scrubber-container.ytd-comment-replies-renderer
+.ytp-scrubber-container.ytd-comment-replies-renderer
 .input-wrapper
+iron-input#input-1.input-element.style-scope.paper-input
 ================================
 bitly.com
 
@@ -95,6 +96,7 @@ www.naver.com
 
 INVERT
 ul.api_list
+a.thumb
 
 ================================
 cafe.naver.com
