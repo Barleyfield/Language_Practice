@@ -7,18 +7,8 @@ DARK READER brower extension custom settings
 youtube.com
 
 INVERT
-.ytp-volume-slider
-.input-element
-.ytp-progress-list
-.ytp-hover-progress
-.ytp-play-progress
-.ytp-swatch-background-color
-.ytp-progress-bar
-.ytp-progress-bar-container
-.ytp-progress-bar-padding
-.ytp-scrubber-container.ytd-comment-replies-renderer
-.input-wrapper
-iron-input#input-1.input-element.style-scope.paper-input
+input.style-scope.paper-input
+
 ================================
 bitly.com
 
@@ -44,6 +34,7 @@ post.naver.com
 
 INVERT
 span.ell
+p.title
 
 ================================
 
@@ -105,3 +96,61 @@ INVERT
 div#gnb_my_lyr.gnb_my_lyr
 div.gnb_my_community
 div.gnb_my_content
+
+================================
+m.blog.naver.com
+
+INVERT
+span.Nicon_search
+span.Nicon_drawer
+span.sp.ico
+
+================================
+bbb.hidden-street.net
+
+INVERT
+div#main-wrapper
+img
+strong
+p
+
+================================
+search.naver.com
+
+INVERT
+span.spnew.name
+
+================================
+epnews.co.kr
+
+INVERT
+img#logo
+td#subMenu
+a.com
+span
+a
+td.c_title_i
+td.c_sub_title_i
+
+================================
+
+www.dbpia.co.kr
+
+INVERT
+label::after
+
+================================
+
+scp-wiki.wikidot.com
+
+CSS
+div#container-wrap, .panel-body, .content-panel {
+    background-image: none !important;
+}
+div#container-wrap::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 162px;
+    background-image: url(http://www.scp-wiki.net/local--files/component:theme/body_bg.png) !important;
+}
