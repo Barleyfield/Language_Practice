@@ -8,6 +8,7 @@ youtube.com
 
 INVERT
 input.style-scope.paper-input
+div#enhancer-for-youtube-slider
 
 ================================
 bitly.com
@@ -154,3 +155,17 @@ div#container-wrap::before {
     width: 100%; height: 162px;
     background-image: url(http://www.scp-wiki.net/local--files/component:theme/body_bg.png) !important;
 }
+================================
+mk.co.kr
+
+INVERT
+h1.top_title
+h2.sub_title1
+li.author
+
+================================
+
+forum.nexon.com
+
+INVERT
+button.on
