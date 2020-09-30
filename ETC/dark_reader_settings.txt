@@ -169,3 +169,12 @@ forum.nexon.com
 
 INVERT
 button.on
+
+================================
+
+mail.naver.com
+
+CSS
+div.gnb_my_content {
+  background-color: #000000 !important;
+}
