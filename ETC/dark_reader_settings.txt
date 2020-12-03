@@ -178,3 +178,11 @@ CSS
 div.gnb_my_content {
   background-color: #000000 !important;
 }
+
+
+================================
+
+m.wordnet.co.kr
+
+INVERT
+img.ui.image.label-result-box
