@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!--
+    스파르타 온라인 - 로그인 페이지 만들기
+    * 글자, 그림 가운데 정렬
+    * 폰트 입히기
+    * 버튼 mybtn 클래스로 묶고 장식
+-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>로그인페이지</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        .mytitle {
+            width: 300px;
+            height: 200px;
+
+            color: white;
+            text-align: center;
+
+            background-image: url('https://www.ancient-origins.net/sites/default/files/field/image/Agesilaus-II-cover.jpg');
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px;
+            padding-top: 20px;
+        }
+
+        .wrap {
+            width: 300px;
+            margin: auto;
+        }
+
+        .mybtn {
+            width: 300px;
+            height: 50px;
+            color: white;
+            text-align: center;
+            background-color: brown;
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="mytitle">
+            <h1>로그인 페이지</h1>
+            <h5>아이디, 비밀번호를 입력해주세요.</h5>
+        </div>
+        <p>ID: <input type="text" /></p>
+        <p>PW: <input type="text" /></p>
+
+        <button class="mybtn">로그인하기</button>
+
+    </div>
+</body>
+
+</html>

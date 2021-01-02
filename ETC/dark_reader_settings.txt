@@ -186,3 +186,11 @@ m.wordnet.co.kr
 
 INVERT
 img.ui.image.label-result-box
+
+
+===============================
+web.humoruniv.com
+
+tr#li_chk_pds {
+    background: ${rgb(0,0,0)} !important;
+}
