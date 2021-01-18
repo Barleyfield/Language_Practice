@@ -1,4 +1,4 @@
-#include <cstdio>
+﻿#include <cstdio>
 int main() {
 	printf("34+56\n");
 	printf("%d\n", 34 + 56);
