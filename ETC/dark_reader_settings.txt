@@ -194,3 +194,9 @@ web.humoruniv.com
 tr#li_chk_pds {
     background: ${rgb(0,0,0)} !important;
 }
+
+===============================
+11st.co.kr
+
+INVERT
+a.menu
