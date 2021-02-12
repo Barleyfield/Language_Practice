@@ -10,8 +10,10 @@ Created by Barley
 import requests
 from bs4 import BeautifulSoup
 
-print("전자책 검색기")
+print("전자책 검색기 by Barley")
 print("※ 정확한 도서명/출판사명을 입력하는 것이 좋습니다.")
+print("※ 현재 전북교육청 대출은 교보만 가능. 나머지는 로그인 불가")
+print("※ 광주 남구 전자도서관(교보문고old) 정확한 주소 찾기")
 book_name = input("전자책 검색 : ")
 
 kyobo_query = "/Kyobo_T3_Mobile/Phone/Main/Ebook_List.asp?sortType=3&keyword="
@@ -21,6 +23,8 @@ bookcube_query = "/FxLibrary/product/list/?page=1&keyoption2=0&category=&searcho
 library = {
     "경기도사이버도서관(교보문고old)":"http://ebook.golibrary.go.kr:8091",
     "광산구통합도서관(교보문고old)": "http://210.179.176.19:8000",
+    "광주 남구 전자도서관(교보문고old)": "http://ebook.namgu.gwangju.kr:80",
+    "광주 남구 전자도서관(yes24)": "http://ebook.namgu.gwangju.kr:8080",
     "광주광역시립도서관(소장)(교보문고old)": "http://ebook.citylib.gwangju.kr:80",
     "광주광역시립도서관(구독)(교보문고new)": "http://citylib.dkyobobook.co.kr:80",
     "광주광역시립도서관(yes24)": "http://ebook.citylib.gwangju.kr:80/YES24",
@@ -41,7 +45,11 @@ library = {
     "광주광역시 서구 통합도서관(구독)(교보문고new)": "http://seogulib.dkyobobook.co.kr",
     "영천시립도서관(yes24)": "http://www.yclib.go.kr:8080",
     "전남대학교 전자도서관(yes24)" : "http://ebook.jnu.ac.kr:8800/YES24",
+    "전남대학교 전자도서관(북큐브old)": "http://ebook.jnu.ac.kr:8088",
     "전남도립도서관(yes24)": "http://152.99.134.221:8080",
+    "전라북도교육청 통합도서관(교보문고old)": "http://ebook.jbe.go.kr:10011",
+    "전라북도교육청 통합도서관(yes24)": "http://ebook.jbe.go.kr:10061",
+    "전라북도교육청 통합도서관(북큐브old)": "http://ebook.jbe.go.kr:10046",
     "전라남도교육청 통합도서관(교보문고old)": "http://ebook.jne.go.kr:8100",
     "전라남도교육청 통합도서관(yes24)" : "http://ebook.jne.go.kr:8080/B2B_JNE",
     "전라남도교육청 통합도서관(북큐브old)": "http://ebook.jne.go.kr:8084"

@@ -9,7 +9,7 @@ import requests
 from bs4 import BeautifulSoup
 
 book_name = input("Enter E-book name : ")
-url_string = "http://ebook.golibrary.go.kr:8091/Kyobo_T3_Mobile/Phone/Main/Ebook_List.asp?sortType=3&keyword=" + book_name
+url_string = "http://ebook.namgu.gwangju.kr:8080/Kyobo_T3_Mobile/Phone/Main/Ebook_List.asp?sortType=3&keyword=" + book_name
 webpage = requests.get(url_string)
 
 soup = BeautifulSoup(webpage.content, "html.parser")
