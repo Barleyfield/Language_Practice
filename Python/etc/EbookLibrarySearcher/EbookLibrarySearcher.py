@@ -52,7 +52,8 @@ library = {
     "전라북도교육청 통합도서관(북큐브old)": "http://ebook.jbe.go.kr:10046",
     "전라남도교육청 통합도서관(교보문고old)": "http://ebook.jne.go.kr:8100",
     "전라남도교육청 통합도서관(yes24)" : "http://ebook.jne.go.kr:8080/B2B_JNE",
-    "전라남도교육청 통합도서관(북큐브old)": "http://ebook.jne.go.kr:8084"
+    "전라남도교육청 통합도서관(북큐브old)": "http://ebook.jne.go.kr:8084",
+	"광주남구도서관(교보문고old)": "http://ebook.namgu.gwangju.kr:8000/"
     
     }
 
