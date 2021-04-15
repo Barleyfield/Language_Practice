@@ -95,7 +95,7 @@ for name, url in library_dict.items() :
             
             
         for book in books :
-            # 북큐브읙 경우 결과들 아래에 ...으로 제목이 짤린 결과가 하나 더 나온다.
+            # 북큐브의 경우 결과들 아래에 ...으로 제목이 짤린 결과가 하나 더 나온다.
             # = 결과 중복 생략용
             if(book.text.find("...") < 0) :
                 print(book.text)
