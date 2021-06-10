@@ -4,7 +4,7 @@ F6::
 Loop
 {
 send, {AppsKey}
-send, {Up}{Up}{Enter}
+send, {Up}{Up}{Up}{Enter}
 send, {Down}
 Sleep, 50
 }
