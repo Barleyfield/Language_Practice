@@ -149,6 +149,10 @@ class GenerateGradeReport:
                 
     def makeFooter(self):
         self.buffer.append("\n")
+		
+	# 새 학생 등록 후 report 출력 시 이전 report와 같이 출력하는 경우가 있어 초기화 함수 구현
+    def bufferFlush(self) :
+        self.buffer = list()
 
 class Score:
     def __init__(self, studentId, subject, point):
@@ -211,6 +215,9 @@ if __name__ == '__main__' :
 	for outline in report:
 	    print(outline)
 	
+	# report 내용 초기
+	report = gradeReport.bufferFlush()
+	
 	# --- 여기까지 문제 2 부분 ----
 	
 	# --- 여기서부터 문제 3 부분 ---
@@ -220,16 +227,59 @@ if __name__ == '__main__' :
 	while True :
 		studentId_input = int(input("Student ID : "))
 		studentName_input = input("Student Name : ")
-		studentMajorSubject = int(input("Major Subject (1.Korean, 2.Mathmatics) : "))
+		studentMajorSubject = int(input("Major Subject (1.Korean, 2.Mathmatics) : "))	# 전공과목
+		studentTestSubject = int(input("Test Subject (1.Korean, 2.Mathmatics) : ")) 	# 시험봤던 과목
+		studentScore = int(input("Test Subject Score : "))	# 시험봤던 과목의 점수 
 		
-		# 과목이 한국어
-		if(studentMajorSubject == 1) :	
-			newStudent = Student(studentId_input, studentName_input, Korean)
-		# 과목이 수학
+		# 중복 검사
+		# 이름, 학번 모두 같은 항목이 이미 등록되었는지 확인
+		
+		isStudentRegistered = False
+		studentIndex = 0
+		for i in range(len(newStudentList)) :
+			duplicateCounter = 0
+			# 학번 중복 검사
+			if (studentId_input == newStudentList[i].getStudentId()) :
+				duplicateCounter += 1
+			
+			# 이름 중복 검사
+			if (studentName_input == newStudentList[i].getStudentName()) :
+				duplicateCounter += 1
+			
+			# 둘 다 중복이면 break
+			if(duplicateCounter == 2) :			
+				isStudentRegistered = True
+				studentIndex = i 			# 원래 있는 학생의 인덱스(위치) 구하기 
+				break
+			
+		# 처음 등록하는 학생
+		if(isStudentRegistered == False) :
+			# 전공과목이 국어
+			if(studentMajorSubject == 1) :	
+				newStudent = Student(studentId_input, studentName_input, Korean)
+			# 전공과목이 수학
+			else :
+				newStudent = Student(studentId_input, studentName_input, Math)
+			
+			newStudentList.append(newStudent)	# std_info.dat 작성용
+			goodSchool.addStudent(newStudent)	# 학교에 학생 등록
+			
+			# 시험봤던 과목이 국어
+			if(studentTestSubject == 1) :
+				Korean.register(newStudent)
+				addScoreForStudent(newStudent, Korean, studentScore)
+			# 시험봤던 과목이 수학
+			else :
+				Math.register(newStudent)
+				addScoreForStudent(newStudent, Math, studentScore)
+		# 이미 존재하는 학생
 		else :
-			newStudent = Student(studentId_input, studentName_input, Math)
-		
-		newStudentList.append(newStudent)
+			# 시험봤던 과목이 국어
+			if(studentTestSubject == 1) :
+				addScoreForStudent(newStudentList[studentIndex], Korean, studentScore)
+			# 시험봤던 과목이 수학
+			else :
+				addScoreForStudent(newStudentList[studentIndex], Math, studentScore)		
 
 		# 계속할 것인지 그만둘 것인지 결정
 		continueOrQuit = int(input("Add another student information (1.yes, 2.no) : "))
@@ -237,13 +287,22 @@ if __name__ == '__main__' :
 			break
 		else :
 			continue
+	
+	print("\n========Print scores of new students========\n")
+	report = gradeReport.getReport(goodSchool)
+
+	# for outline in report:
+	#   print(outline)
+	
+	for i in range(len(report)) :
+		print(report[i])
+	
 		
 	# --- 여기까지 문제 3 부분 ---
 	
 	# --- 여기서부터 문제 4 부분 ---
 	
-	## 파일 저장하기
-	
+	# 파일 저장하기
 	f = open('std_info.dat', 'w+')
 	f.writelines("Index :  ID,    Name,    Major Subject\n")
 	for i in range(len(newStudentList)) :
@@ -259,7 +318,7 @@ if __name__ == '__main__' :
 				 )
 	f.close()
 	
-	## 저장한 파일 읽어오기
+	# 저장한 파일 읽어오기
 	f = open('std_info.dat', 'r')
 	print(f.read())
 	
