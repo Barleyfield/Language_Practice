@@ -215,7 +215,7 @@ if __name__ == '__main__' :
 	for outline in report:
 	    print(outline)
 	
-	# report 내용 초기
+	# report 내용 초기화
 	report = gradeReport.bufferFlush()
 	
 	# --- 여기까지 문제 2 부분 ----
