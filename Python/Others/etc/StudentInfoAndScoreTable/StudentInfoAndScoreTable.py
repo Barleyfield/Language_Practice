@@ -236,14 +236,14 @@ if __name__ == '__main__' :
 		
 		isStudentRegistered = False
 		studentIndex = 0
-		for i in range(len(newStudentList)) :
+		for i in range(len(dataList)) :
 			duplicateCounter = 0
 			# 학번 중복 검사
-			if (studentId_input == newStudentList[i].getStudentId()) :
+			if (studentId_input == dataList[i].getStudentId()) :
 				duplicateCounter += 1
 			
 			# 이름 중복 검사
-			if (studentName_input == newStudentList[i].getStudentName()) :
+			if (studentName_input == dataList[i].getStudentName()) :
 				duplicateCounter += 1
 			
 			# 둘 다 중복이면 break
@@ -261,6 +261,7 @@ if __name__ == '__main__' :
 			else :
 				newStudent = Student(studentId_input, studentName_input, Math)
 			
+			dataList.append(newStudent)
 			newStudentList.append(newStudent)	# std_info.dat 작성용
 			goodSchool.addStudent(newStudent)	# 학교에 학생 등록
 			
@@ -276,10 +277,10 @@ if __name__ == '__main__' :
 		else :
 			# 시험봤던 과목이 국어
 			if(studentTestSubject == 1) :
-				addScoreForStudent(newStudentList[studentIndex], Korean, studentScore)
+				addScoreForStudent(dataList[studentIndex], Korean, studentScore)
 			# 시험봤던 과목이 수학
 			else :
-				addScoreForStudent(newStudentList[studentIndex], Math, studentScore)		
+				addScoreForStudent(dataList[studentIndex], Math, studentScore)		
 
 		# 계속할 것인지 그만둘 것인지 결정
 		continueOrQuit = int(input("Add another student information (1.yes, 2.no) : "))

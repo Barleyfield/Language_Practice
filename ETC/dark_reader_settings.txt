@@ -200,3 +200,17 @@ tr#li_chk_pds {
 
 INVERT
 a.menu
+
+===============================
+map.naver.com
+
+INVERT
+button.btn_panorama
+button.btn.btn_land
+button.btn.btn_theme
+button.btn_radius
+button.btn_area
+button.btn_measure
+button.btn_location
+button.btn_zoom_in
+button.btn_zoom_out
